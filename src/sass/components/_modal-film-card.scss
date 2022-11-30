@@ -1,0 +1,203 @@
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    padding-top: 20px;
+    padding-bottom: 20px;
+       
+    background-color: rgba(0, 0, 0, .25);
+       
+    overflow: scroll;
+    
+    // pointer-events: none;
+}
+
+.backdrop.is-hidden {
+visibility: hidden;
+opacity: 0;
+pointer-events: none;
+}
+
+.modal-box {
+    position: relative;
+    max-width: 280px;
+
+    display: flex;
+    background-color: var(--light-txt-color);
+    z-index: 5;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 40px 20px;
+
+    @media screen and (min-width: 768px) {
+        max-width: 704px;
+        height: auto;
+        padding: 40px 40px;
+        flex-direction:row;
+    }
+
+    @media screen and (min-width: 1280px) {
+        max-width: 806px;
+        padding: 40px 12px;
+    }    
+}
+
+.btn-close {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+
+    width: 40px;
+    height: 40px;
+
+    background-color: transparent;
+    border: 0;
+}
+
+.modal_movie {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @media screen and (min-width: 768px) {
+        gap: 68px;
+        flex-direction: row;
+    }
+
+    @media screen and (min-width: 1280px) {
+        gap: 16px;
+    }
+}
+
+.modal_posterbox {
+    margin: 0 auto;
+
+    max-width: 240px;
+    height: 357px;
+
+    @media screen and (min-width: 768px) {
+        min-width: 264px;
+        height: 374px;
+    }   
+    
+    @media screen and (min-width: 1280px) {
+        min-width: 375px;
+        height: 478px;
+    }
+}
+
+.modal_poster {
+    object-fit: cover;
+    border-radius: 5px;
+    height: 100%;
+}
+
+.modal-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 240px;  
+
+    @media screen and (min-width: 768px) {
+        width: 264px;  
+    }
+
+    @media screen and (min-width: 1280px) {
+        width: 391px;      
+    }
+}
+
+.modal-info_title {
+    text-transform: uppercase;
+    font-size: 20px;
+    line-height: 1.15;
+
+    @media screen and(min-width: 1280px){
+    font-size: 30px;
+    line-height: 1.17;
+    }
+}
+
+.modal-info_table {
+    width: 240px;
+    
+    @media screen and (min-width: 768px) {
+        width: 264px;
+    }
+
+    @media screen and (min-width: 1280px) {
+        width: 391px;
+    }
+}
+
+tbody {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+th {
+    width: 120px;
+    color: var(--card-inform-txt-color);
+    text-align: left;
+    font-weight: inherit;
+
+    @media screen and (min-width: 1280px) {
+        width: 150px;
+    }
+}
+
+td {
+    text-align: left;
+}
+
+.modal-table_vote {
+    min-width: 36px;
+    height: 16px;
+    padding: 1px 10px;
+    border-radius: 5px;
+    color: var(--light-txt-color);
+    background-color: var(--btn-background-color);
+}
+
+.modal-table_votes {
+    min-width: 36px;
+    height: 16px;
+    padding: 1px 4px;
+    border-radius: 5px;
+    background-color: var(--votes-bg-color);
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.modal-info_about {
+    text-transform: uppercase;
+}
+
+.modal-info_description {
+    line-height: 1.67;
+}
+
+.modal_btnbox {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: auto;     
+}
+
+.modal_btn {
+    width: 110px;
+
+    @media screen and (min-width: 768px) {
+        width: 125px;
+    }
+
+    @media screen and (min-width: 1280px) {
+        width: 136px;
+    }
+}
